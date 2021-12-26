@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Inconsolata:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <script src="./main.js"></script>
+    <title>Horoscope</title>
+</head>
+
+<body onload="updatePage()">
+    <h1>HOROSCOPE</h1>
+    <form>
+        <input id="födelseInput" type="date" name="birthday" value="" /><br>
+        <input class="button" id="addHoroscopeButton" type="button" value="Spara mitt horoskop" onclick="addHoroscope()" /><br>
+        <input class="button" id="updateHoroscopeButton" type="button" value="Uppdatera mitt horoskop" onclick="updateHoroscope()" /><br>
+        <input class="button" id="deleteHoroscopeButton" type="button" value="Radera mitt horoskop" onclick="deleteHoroscope()" /><br>
+    </form>
+    <div id="skrivUt-text">
+        <p id="horoscope-output"></p>
+    </div>
+</body>
+
+</html>
