@@ -7,9 +7,9 @@ session_start();
 require 'countHoroscope.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    parse_str(file_get_contents("php://input"), $_PUT);
+    parse_str(file_get_contents("php://input"), $_POST);
 
-    $currentHoroscope = countHoroscope($_PUT["birthday"]);
+    $currentHoroscope = countHoroscope($_POST["birthday"]);
 
     if (isset($_SESSION["horoscope"])) {
         if (($currentHoroscope != "inget datum angivet") && ($currentHoroscope != "Inget horoskop hittat"))
